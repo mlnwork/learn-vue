@@ -1,0 +1,106 @@
+.first-face
+{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	
+}
+.second-face{
+	display: flex;
+	justify-content: space-between;
+}
+/*匹配同类型中的第2个同级兄弟元素*/
+.second-face .pip:nth-of-type(2){
+	align-self: flex-end;
+	
+}
+.third-face{
+	display: flex;
+	justify-content: space-between;
+}
+.third-face .pip:nth-of-type(2){
+	align-self: center;
+}
+
+.third-face .pip:nth-of-type(3){
+	align-self: flex-end;
+}
+
+.fourth-face{
+	display: flex;
+	justify-content: space-between;
+}
+.fourth-face .column{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+ 
+.fifth-face{
+	display: flex;
+	
+}
+.fifth-face .column{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.fifth-face .column:nth-of-type(2){
+	align-self: center;
+}
+
+.sixth-face{
+	display: flex;
+	justify-content: space-between;
+}
+.sixth-face .column{
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: space-between;
+}
+
+/* OTHER STYLES */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-family: 'Open Sans', sans-serif;
+  
+  background: linear-gradient(top, #222, #333);
+}
+
+/*
+	选择其 class 属性以 "face" 结尾的所有 元素。
+	*/
+[class$="face"] {
+  margin: 16px;
+  padding: 4px;
+  
+  background-color: #e7e7e7;
+  width: 104px;
+  height: 104px;
+  border-radius: 10%;
+}
+
+.pip {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 4px;
+  background-color: #333;/* 
+ 
+}

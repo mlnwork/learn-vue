@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 适配移动 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			body {
+				padding: 0;
+				margin: 0;
+			}
+
+			ul,
+			p {
+				margin: 0;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			.searchCnt {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+
+			}
+		.div_search{
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			margin: 10px 5px;
+			padding: 3px 5px;
+			height: 25px;
+			border-radius: 5px;
+			border: 1px solid #e3e4e6;
+			background-color: #e3e4e6;
+		}
+		.div_search input {
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #e3e4e6;
+			background-color: #e3e4e6;
+		}
+
+			.swiperCnt {}
+
+			.swiperCnt img {
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+
+			.menuCnt {
+				display: flex;
+				flex-flow: row;
+				flex-wrap: wrap;
+				padding: 10px;
+
+			}
+
+			.menuItem {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 20%;
+				padding: 0 10px;
+				margin-bottom: 10px;
+			}
+
+			.menuItem img {
+				width: 41px;
+				height: 41px;
+
+			}
+
+			.menuItem p {
+				font-size: 14px;
+			}
+
+			/*热门话题*/
+			.hotCnt {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				border-bottom: 10px solid #f2f2f2;
+			}
+
+			.hotRow {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				border-top: 1px #E3E4E6 solid;
+				margin-top: 50px 0;
+
+			}
+
+			.hotItem {
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+				width: 50%;
+				padding: 10px;
+
+			}
+
+			.hotItem img {
+				width: 30px;
+				height: 30px;
+
+			}
+
+			.hotItem p {
+				margin: 5px;
+				flex: 1;
+				border-right: 1px solid #dddddd;
+			}
+
+			/*热门话题结束*/
+			/* 微博之夜 */
+			.weiboCnt {
+				border-bottom: 10px solid #f2f2f2;
+			}
+
+			.weiboCnt .title {
+				display: flex;
+				flex-flow: row;
+				justify-content: space-between;
+				font-size: 14px;
+				color: #939393;
+				padding-right: 5px;
+				margin: 5px 0;
+			}
+
+			.title span:nth-child(1) {
+				border-left: 3px orange solid;
+				font-size: 16px;
+
+				font-size: 16px;
+				color: #636363;
+				padding: 0 8px;
+
+			}
+
+			.weiboBox {
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
+				overflow-x: auto;
+			}
+
+			.weiboBox img {
+				width: 99%;
+				height: auto;
+			}
+
+			.groupItem {
+				width: 45%;
+				display: flex;
+				flex-flow: column;
+				flex-shrink: 0;
+				justify-content: center;
+				
+				margin: 5px;
+				border: 1px solid #dddddd;
+			}
+
+			.groupItem p {
+				font-size: 14px;
+				margin: 5px;
+			}
+
+			/* 微博之夜 结束 */
+			/* tab 开始*/
+			.tabCnt {
+				display: flex;
+				flex-flow: row;
+				justify-content: space-around;
+
+				border-bottom: 10px solid #f2f2f2;
+			}
+
+			.tabCnt p {
+				margin: 8px;
+				padding-bottom: 5px;
+				color: #939393;
+				font-size: 16px;
+			}
+
+			.tabCnt .active {
+				border-bottom: orange 3px solid;
+
+			}
+
+			/* tab bar 结束 */
+			/* mark 开始 */
+			.mark {
+				height: 35px;
+				background: #F2F2F2;
+				padding-left: 8px;
+				font-size: 14px;
+				color: #636363;
+			}
+
+			/* mark 结束 */
+			/* 用户信息 */
+			.userInfoCnt {
+				display: flex;
+				flex-flow: row;
+				justify-content: space-between;
+				padding: 9px;
+			}
+
+			.userInfoCnt input {
+
+				color: orange;
+				background-color: rgba(0, 0, 0, 0);
+				border: 1px solid orange;
+				border-radius: 5px;
+				height: 30px;
+			}
+
+			.userInfoBox {
+				display: flex;
+
+			}
+
+			.userInfoBox img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+			.userInfoGroup{
+				display: flex;
+				flex-direction: column;
+			}
+			.userName {
+				font-size: 16px;
+				color: orange;
+			}
+
+			.timeBox {
+				display: flex;
+				flex-flow: row;
+				margin-top: 5px;
+
+			}
+
+			.timeBox p {
+				padding-right: 10px;
+				font-size: 12px;
+			}
+
+			.timeBox p:last-child {
+				color: #557ca7;
+			}
+			/* 用户信息完成 */
+			/* 微博内容 */
+			.weiboDetail{
+				padding: 0 10px;
+				font-size: 1px;
+				color:#333333;
+				
+			}
+			/* 微博操作 */
+			.weiboOp{
+				display: flex;
+				flex-flow: row;
+				justify-content:space-around;
+				margin-top: 10px;
+				border-top: 1px solid #e3e3e3;
+				border-bottom: 10px solid #F2F2F2;
+				padding: 10px;
+			}
+			.weiboOpItem{
+				display: flex;
+				flex-flow: row;
+				align-items: center;
+			}
+			.weiboOpItem img{
+				width: 20px;
+				height: 20px;
+			}
+			.weiboOpItem p{
+				font-size: 12px;
+				padding-left: 5px;
+				color: #939393;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 搜索 -->
+		<div class="searchCnt">
+			<div class="div_search">
+				<input class="input_search" placeholder="大家正在搜: 带孩子去滑雪" />
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div class="swiperCnt">
+			<img src="img/banner.png" />
+		</div>
+		<!-- 菜单按钮 -->
+		<div class="menuCnt">
+
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+			<div class="menuItem">
+				<img src="img/menu.png" />
+				<p>找人</p>
+			</div>
+
+
+		</div>
+		<!-- 热门话题 -->
+		<div class="hotCnt">
+			<div class="hotRow">
+				<div class="hotItem">
+					<img src="img/lm.png" />
+					<p>#全球跨年#</p>
+				</div>
+				<div class="hotItem">
+					<img src="img/lm.png" />
+					<p>#全球跨年#</p>
+				</div>
+			</div>
+			<div class="hotRow">
+				<div class="hotItem">
+					<img src="img/lm.png" />
+					<p>#全球跨年#</p>
+				</div>
+				<div class="hotItem">
+					<img src="img/lm.png" />
+					<p>#全球跨年#</p>
+				</div>
+			</div>
+		</div>
+		<!-- 微博之夜 -->
+		<div class="weiboCnt">
+			<div class="title">
+				<span>微博之夜</span>
+				<span>为爱打Call</span>
+			</div>
+			<div class="weiboGroup">
+				<div class="weiboBox">
+					<div class="groupItem">
+						<img src="./img/rmd.png">
+						<p>一键探秘</p>
+					</div>
+					<div class="groupItem">
+						<img src="./img/rmd.png">
+						<p>一键探秘</p>
+					</div>
+					<div class="groupItem">
+						<img src="./img/rmd.png">
+						<p>一键探秘</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tabCnt">
+			<p>视频</p>
+			<p class="active">头条</p>
+			<p>榜单</p>
+			<p>南京</p>
+		</div>
+		<div class="mark">热门微博24小时排行榜</div>
+		<div class="weibolist">
+			<div class="weiboRow">
+				<div class="userInfoCnt">
+					<div class="userInfoBox">
+						<div class="userHpBox">
+							<img src="./img/hp.png">
+						</div>
+						<div class="userInfoGroup">
+							<p class="userName">用户名</p>
+							<div class="timeBox">
+								<p class="time">2小时前</p>
+								<p class="source">来自 iPhoneX</p>
+							</div>
+						</div>
+					</div>
+					<input type="button" class="follow" value="+ 关注" />
+				</div>
+				<div class="weiboDetail">
+				 不管是夫妻，情侣，还是朋友，走的长远，彼此之间相互信任最重要！
+				 我了解璐璐为人，也信任我所有的朋友，我相信一切都很美好！
+				 谢谢大家关心，晚上演出舞还没练明白呢，我去练舞啦，祝大家新年快乐
+            
+				</div>
+				<div class="weiboOp">
+					<div class="weiboOpItem">
+						<img src="img/zhuanfa.png" >
+						<p>4万</p>
+					</div>
+					<div class="weiboOpItem">
+						<img src="img/pl.png" >
+						<p>3万</p>
+					</div>
+					<div class="weiboOpItem">
+						<img src="img/zan.png" >
+						<p>13万</p>
+					</div>
+				</div>
+			</div>
+		<div class="weiboRow">
+			<div class="userInfoCnt">
+				<div class="userInfoBox">
+					<div class="userHpBox">
+						<img src="./img/hp.png">
+					</div>
+					<div class="userInfoGroup">
+						<p class="userName">用户名</p>
+						<div class="timeBox">
+							<p class="time">2小时前</p>
+							<p class="source">来自 iPhoneX</p>
+						</div>
+					</div>
+		
+				</div>
+				<input type="button" class="follow" value="+ 关注" />
+			</div>
+			<div class="weiboDetail">
+			 不管是夫妻，情侣，还是朋友，走的长远，彼此之间相互信任最重要！
+			 我了解璐璐为人，也信任我所有的朋友，我相信一切都很美好！
+			 谢谢大家关心，晚上演出舞还没练明白呢，我去练舞啦，祝大家新年快乐
+		
+			</div>
+			<div class="weiboOp">
+				<div class="weiboOpItem">
+					<img src="img/zhuanfa.png" >
+					<p>4万</p>
+				</div>
+				<div class="weiboOpItem">
+					<img src="img/pl.png" >
+					<p>3万</p>
+				</div>
+				<div class="weiboOpItem">
+					<img src="img/zan.png" >
+					<p>13万</p>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

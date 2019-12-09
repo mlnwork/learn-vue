@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.div3 div{
+			   display: inline-block;
+			   width: 100px;
+			   height:100px;
+			  
+			}
+			.div2{
+		/* 	position: relative; */
+			position: static;
+			top: 20px;
+			left:30px;
+			  
+			}
+			 .box1{
+				 background-color: #0000FF;
+			 }
+			 .box2{
+				background-color: red;
+				position:absolute;
+				left: 30px;
+				top: 30px;
+			 }
+			 .box3{
+				 background-color: #1780FF;
+			 }
+			 /***/
+			 
+			 .cart_btn{
+				 position:relative ;
+				 top:100px;
+				 height:30px;
+				 width:120px; 
+				 border:1px solid #eee;
+				 padding-left:30px;
+				 background:url("./img/shopping_car.png") no-repeat;
+			 }
+			 .cart_btn a{
+			 	color:red;
+			 	text-decoration: none;
+			 	font-size: 14px;
+			 	padding-left: 15px;
+			 	line-height: 30px;
+			 }
+			 .cart_btn span{
+				position: absolute;
+				left:15px;
+				top: -15px; 
+				background-color: mediumvioletred;
+				border-radius: 3px
+			}
+			.cart_btn span i{
+					float:left;
+					color:#fff;
+					font-size:14px;
+					padding-right: 5px;
+					height:20px;
+				}
+		
+			 
+		</style>
+	</head>
+	<body>
+		<div class="mydiv">
+			<div class="div2">
+				<div class="div3">
+					<div class="box1">
+						我是box1
+					</div>
+					<div class="box2">
+						box2
+					</div>
+					<div class="box3">
+						box3
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+		 
+			<div class="cart_btn">
+			    <span><i>155</i></span>
+			    <a href="dd.html" target="_blank">去购物车结算</a>
+			 </div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<meta name="viewport" content="width=device-width,
+		initial-scale=1,minimum-scale=1,maximum-scale=1,
+		user-scalable=no" />
+		<style type="text/css">
+			:root {
+			  --fontSize: 1rem;
+			  --mainColor: green;
+			  --centered: {
+			      display: flex;
+			      align-items: center;
+			      justify-content: center;
+			  };
+			}
+			h2{
+				color: var(--mainColor);
+			}
+			/* 宽度大于370 */
+			@media (min-width: 370px) {
+
+				/*屏幕宽度≥480px时 */
+				h1 {
+					height: 160px;
+					text-align: center;
+					color: blue;
+				}
+			}
+			/* 宽度小于410 */
+			@media  (max-width:410px) {
+				/*屏幕宽度≥480px时 */
+				h1 {
+					height: 160px;
+					text-align: center;
+					color: red;
+				}
+				
+			}
+		</style>
+	</head>
+	<body>
+		<h2>dd</h2>
+		<h1>你好</h1>
+	</body>
+</html>

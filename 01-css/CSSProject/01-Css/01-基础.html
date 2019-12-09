@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- 链接式 -->
+		<link href="css/base.css" rel="stylesheet" />
+		<style>
+		
+			* {
+				color: green
+			}
+ 
+			.header {
+				color: var(--mainColor);
+			
+				font-size: 28px;
+			}
+
+			#myspan {
+				color: red;
+				font-size: 28px;
+			}
+
+			a:link {
+				color: #FF0000
+			}
+
+			/* 未访问的链接 */
+			a:visited {
+				color: #00FF00
+			}
+
+			/* 已访问的链接 */
+			a:hover {
+				color: #FF00FF
+			}
+
+			/* 鼠标移动到链接上 */
+			a:active {
+				color: #0000FF
+			}
+
+			/* 选定的链接 */
+
+
+			/* 层叠性开始 */
+			#stack {
+				color: #0000FF;
+			}
+
+			.stack {
+				color: skyblue;
+				/* color:skyblue !important; */
+			}
+
+			span {
+				color: aliceblue;
+			}
+
+			.inher {
+				/* border 无继承 */
+				border: 1px solid #0000FF;
+				color: #0000FF;
+			}
+
+			/* 层叠性结束 */
+			/* 交集选择器*/
+			div.two {
+				color: #87CEEB;
+			}
+
+			/* 交集选择器结束*/
+			/* 并集选择器 */
+			span,
+			#union,
+			.union {
+				color: #FF00FF;
+			}
+
+			/* 并集选择器结束 */
+
+			/* 后代选择器 */
+			.gen span {
+				color: chocolate;
+			}
+
+			.gen .myspan {
+				color: black;
+			}
+
+			.gen #myspan {
+				color: yellow;
+			}
+
+			/* 后代选择器结束 */
+			/* 复合选择器 */
+			#aa ul li {	  /*优先级 102 */
+				
+				color:red	}
+			.aa {	  /*优先级 10 */
+				color:blue	
+				}
+			/* 复合选择器结束 */
+		
+		</style>
+		<!-- 导入式 -->
+		<style>
+			@import url("css/base.css");
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			ddd
+		</header>
+		<span id="myspan">
+			<a href="./">span</a>
+		</span>
+		<!-- 层叠性 -->
+		<span class="stack" id="stack">
+			<!-- <span class="stack" id="stack" style="color: black;"> -->
+			我是层叠的
+		</span>
+		<!-- 层叠性 -->
+		<!-- 继承性 -->
+		<div class="inher">
+			我是继承性-他爸
+			<div>
+				我是继承性-他儿子
+				<div>
+					我是继承性-他儿子
+				</div>
+			</div>
+		</div>
+		<!-- 继承性 结束-->
+		<!-- 交集选择器 -->
+		<div class="two">
+			交集选择器 two p.two
+		</div>
+		<div class="two">
+			交集选择器 two p.two
+		</div>
+		<!-- 交集选择器 结束 -->
+		<!-- 并集选择器 -->
+		<div class="union">
+			并集选择器
+		</div>
+		<span>
+			并集选择器
+		</span>
+		<span id="union">
+			并集选择器
+		</span>
+		<!--  并集选择器 结束 -->
+		<!-- 后代选择器 -->
+		<div class="gen">
+			后代选择器 class 中所有span
+			<span>
+				后代选择器
+			</span>
+			<span>
+				后代选择器
+			</span>
+
+		</div>
+		<!-- 后代选择器 结束 -->
+		<!-- 复合选择器 -->
+		<div id="aa">
+			<ul>
+				<li class="aa">
+					 复合选择器 
+					<em class="aa">复合选择器</em>的优先级
+				</li>
+		  </ul>
+		  <!-- 复合选择器 结束-->
+		  
+		
+		</div>
+		<div class="header" style="color: cornflowerblue;">
+			标题
+		</div>
+		<div class="main">
+
+			内容
+		</div>
+		<div class="footer">
+
+			页脚
+		</div>
+	 
+	</body>
+</html>

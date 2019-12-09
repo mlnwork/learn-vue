@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		/* 子选择器 */
+			.sub>span{
+				color:#00FF00;
+			}
+			.sub ul>li{
+					color:#0000FF
+			}
+			.sub ul>li>span{
+					color:#D2691E;
+			}
+			
+		/* 子选择器结束 */
+		
+		/* 属性选择 */
+		/* 具有name属性的a元素 */
+		a[name]{
+			color: #008000;
+		}
+		/*具有 special 属性的任意元素*/
+		[special]{
+			color:#FF0000
+		}
+		a[name=hyper]{
+			color:#00FF00
+		}
+		/* 属性选择结束*/
+		/* 伪类选择器 */
+		a:active{
+			color:black
+		}
+		/* 鼠标悬浮 变色 */
+		a:hover{
+			color:green
+		}
+		/* 伪类选择器结束 */
+		/* first-child */
+		p:first-child{	
+			font-weight: bold;
+			color: #00FF00;
+		}
+		/* first-child 结束*/
+		/* transition */
+		div{ 
+			 
+			background:#fcc; 		
+			height:40px; 	
+			transition:all 1s; 
+		}	
+		div:hover{ 
+			width:300px;
+			background:#f00;  
+		}
+		
+		/* transition */
+		a[name=hyperLink]{
+			 transition:all 1s; 
+		 }
+		a:hover{
+			color:#FF0000;
+		}
+		a:active{
+			color:#0000FF;
+		}
+		.tran{ 
+			 transition:all 1s; 
+			 border: 1px solid red;
+		}
+		.tran:hover{
+			height:20px;
+			border: 1px solid blue;
+		}
+		.tran:focus{
+			height:50px;
+			border: 1px solid red;
+		}
+		
+		.divTran{
+			width: 50px;
+			height: 70px;
+			background-color: #0000FF;
+			transition:background-color 1s; 
+		}
+		.divTran:hover{
+			background-color: #87CEEB;	
+		}
+		/* transition 结束*/
+		/* before after */
+		 
+		p::before{
+		 content:"--" ;
+		}
+		p::after{
+			content: "-版权-";
+			color:red
+		}
+		
+		/* before after 结束 */
+		.test{
+			width: 200px;
+		}
+		 li{
+			background: #FFCCCC;
+			list-style: none;
+			transition: all 0.5s;
+			height:35px;
+			border: 1px sienna solid;
+		}
+		  li:hover{
+			color: #D2691E;
+			background:white;
+		 
+		}
+		</style>
+	</head>
+	<body>
+		<!-- first-child -->
+		<!-- <div> ss </div> -->
+		<!-- 如果p 是第一个元素 则变色 -->
+		<p>
+			第一个元素变色
+		</p>
+	
+		<p>p第一个原先</p>
+		<div>
+			<p>我是在div元素中第一个子元素p,我会变色</p>
+		 </div>.
+		<!-- first-child结束 -->
+		<!-- 子选择器 -->
+		<div class="sub">
+			 <ul>
+				<li>试试<span>子选择器 span</span>子选择器 ul</li>
+				<li>身手<span>子选择器 span</span>子选择器 ul</li>
+			</ul>
+		</div>
+	 <!-- 子选择器 结束 -->
+	 <!-- 属性选择器 -->
+		<a name="hyper">我是超链接 我变色 </a><br>
+		<a name="hyper">我是超链接 我变色 </a><br>
+		<a name="hyperLink">我是超链接 我变色 </a><br>
+		
+		<span special="test">span</span>
+		<button special="test">button</button>
+	  <!-- 属性选择器结束 -->
+	  
+		<!-- transition -->
+		<a name="hyperLink" href="/">我是超链接 我变色 </a><br>
+		<input class="tran"/>
+		<div class="divTran">
+		
+		</div>
+		<div class="test">
+			<ul>
+				<li><div>菜单1</div></li>
+				<li>菜单1</li>
+				<li>菜单1</li>
+				<li>菜单1</li>
+				<li>菜单1</li>
+			</ul>
+		</div>
+	</body>
+</html>

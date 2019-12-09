@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css"/>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		*{
+			border:1px solid #FF0000;
+		}
+		div{
+			
+		/* 	display:inline ; */
+			background-color: #87CEEB;
+			width: 200px;
+			height: 300px;
+			margin: 0px 0;
+			padding: 5px;
+		 
+		}
+	  	/* 行级 */
+		span{ 
+		/* 	display:block ; */
+			width: 50px;
+			background-color:#D2691E;
+			line-height: 50px;
+		}
+		/* 块级元素转为行,不可设置宽高 */
+		.div-line{
+			display: inline;
+			/* box-sizing: border-box; */
+			width: 200px;
+			height: 300px;
+		}
+		/* 行级元素转为块 可以设置宽高 */
+		.span-block{
+			display: block;
+			width: 200px;
+			height: 100px;
+		}
+		/* 行级元素转为行内块 可以设置宽高 也可以并排 */
+		.span-inline-block
+		{
+			display: inline-block;
+			width: 50px;
+			height: 80px;
+		}
+	</style>
+	</head>
+	<body>
+		<!-- 容器元素 -->
+		<div class="div-line">
+			我是div-line
+		</div>
+		<span class="span-block">
+			我是 span-block
+		</span>
+		<!-- 行级元素转为行内块 可以设置宽高 也可以并排 -->
+		<div>
+			<span class="span-inline-block">
+				span-inline
+			</span>
+			<span class="span-inline-block">
+				span-inline
+			</span>
+			
+		</div>
+		
+		<div> 我是div
+			
+		</div>
+		<div>
+			是是
+		</div>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span> 
+		
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			console.log($("div").width())
+			
+		})
+	</script>
+</html>
